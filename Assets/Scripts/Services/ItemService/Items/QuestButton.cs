@@ -5,34 +5,41 @@ public class QuestButton : Item, IInteractable
 {
     [SerializeField] private MeshRenderer _meshRenderer;
 
+    private bool _painted;
+
     public event Action OnActivated;
 
     public void Interact(IPlayer player)
     {
-        if (player.Item is Brush brush)
+        if (!_painted)
         {
-            if (brush.Painted)
+            if (player.Item is Brush brush)
             {
-                Paint(brush.CurrentColor);
-                PressToActivate();
-                return;
+                if (brush.Painted)
+                {
+                    Paint(brush.CurrentColor);
+                    return;
+                }
             }
         }
-        PressToKill(player);
+        Press(player);
     }
 
     private void Paint(Color color)
     {
+        _painted = true;
         _meshRenderer.material.color = color;
     }
 
-    private void PressToActivate()
+    private void Press(IPlayer player)
     {
-        OnActivated?.Invoke();
-    }
-
-    private void PressToKill(IPlayer player)
-    {
-        player.Kill();
+        if (_painted)
+        {
+            OnActivated?.Invoke();
+        }
+        else
+        {
+            player.Kill();
+        }
     }
 }

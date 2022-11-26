@@ -14,7 +14,7 @@ public class Brush: Item, IPickable
     public bool Painted => _painted;
     public Color CurrentColor => _currentColor;
 
-    private void Awake()
+    private void Start()
     {
         _clearColor = _colorRenderer.material.color;
     }

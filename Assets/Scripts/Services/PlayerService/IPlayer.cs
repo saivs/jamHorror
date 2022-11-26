@@ -2,9 +2,12 @@
 
 public interface IPlayer
 {
-    Item Item { get; }
+    IPickable Item { get; }
 
     event Action OnDied;
+
+    void InteractWithItem(IInteractable item);
+    void PickItem(IPickable item);
 
     void Kill();
 }
