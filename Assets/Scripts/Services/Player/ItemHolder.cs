@@ -62,7 +62,7 @@ public class ItemHolder : MonoBehaviour
             _pickupProgress = Mathf.MoveTowards(_pickupProgress, 1f, Time.deltaTime * _pickupSpeed);
 
             _itemInArms.transform.position = Vector3.Lerp(_itemStartPosition, _itemHandlerPoint.position, _pickupProgress);
-            _itemInArms.transform.rotation = Quaternion.Lerp(_itemStartRotation, _itemHandlerPoint.rotation, _pickupSpeed);
+            _itemInArms.transform.rotation = Quaternion.Lerp(_itemStartRotation, _itemHandlerPoint.rotation, _pickupProgress);
         }
     }
 }
