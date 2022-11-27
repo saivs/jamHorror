@@ -17,14 +17,18 @@ public class ElectricPanelSwitcher : MonoBehaviour, IInteractable
             return;
         }
 
-        _pressed = true;
-        SwitchDown();
-        OnPressed?.Invoke();
+        Press();
     }
 
-    private void SwitchDown()
+    private void Press()
     {
+        _pressed = true;
+
         float angle = -_button.transform.localRotation.eulerAngles.z * 2;
         _button.RotateAround(_buttonRotatePivot.position, Vector3.forward, angle);
+
+        AudioSource.PlayClipAtPoint(SoundConfig.Instance.ElectricPanelPressButton, transform.position);
+
+        OnPressed?.Invoke();
     }
 }
