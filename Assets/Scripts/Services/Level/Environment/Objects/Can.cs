@@ -12,7 +12,7 @@ public class Can : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        if (Player.Instance.Item is Brush brush)
+        if (Player.Instance.ItemHolder.Item is Brush brush)
         {
             brush.Paint(_config.Color);
             return;

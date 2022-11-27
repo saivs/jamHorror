@@ -9,6 +9,8 @@ public class Item : MonoBehaviour, IInteractable
     private Rigidbody _rigidbody;
     private Collider[] _colliders;
 
+    public event Action OnPickedUp;
+
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
@@ -27,6 +29,8 @@ public class Item : MonoBehaviour, IInteractable
         {
             col.enabled = false;
         }
+
+        OnPickedUp?.Invoke();
     }
 
     public virtual void OnDrop(Vector3 dropForce)

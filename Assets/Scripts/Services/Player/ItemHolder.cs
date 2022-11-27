@@ -20,7 +20,8 @@ public class ItemHolder : MonoBehaviour
 
     private Item _itemInArms;
     private float _currentDropForce;
-    
+
+    public Item Item => _itemInArms;
 
     public void PickupItem(Item item)
     {

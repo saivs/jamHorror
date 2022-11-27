@@ -15,7 +15,7 @@ public class QuestButton : MonoBehaviour, IInteractable
                 if (brush.Painted)
                 {
                     Paint(brush.CurrentColor);
-                    Player.Instance.ConsumeItem();
+                    Destroy(brush.gameObject);
                     return;
                 }
             }

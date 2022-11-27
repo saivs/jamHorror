@@ -8,10 +8,9 @@ public class Player: MonoBehaviour
 
     [SerializeField] private DrunkConfig _drunkConfig;
 
-    private IPickable _item;
     private int _beerCount;
 
-    public IPickable Item => _item;
+    public Item Item => ItemHolder.Item;
 
     public event Action OnDied;
     public event Action<int> OnDrunkBeer;
@@ -28,29 +27,6 @@ public class Player: MonoBehaviour
     public void InteractWithItem(IInteractable item)
     {
         item.Interact();
-    }
-
-    public void ConsumeItem()
-    {
-        var item = _item;
-        UnequipItem();
-        Destroy(item.gameObject);
-    }
-
-    public void EquipItem(IPickable item)
-    {
-        if (_item != null)
-        {
-            UnequipItem();
-        }
-
-        _item = item;
-        _item.Pick();
-    }
-
-    private void UnequipItem()
-    {
-        _item = null;
     }
 
     public void DrinkBeer()

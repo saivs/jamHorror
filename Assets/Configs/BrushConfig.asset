@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9b6621d4a8650c46ae90a426ab523b9, type: 3}
   m_Name: BrushConfig
   m_EditorClassIdentifier: 
-  _clearTimer: 10
+  _clearTimer: 5

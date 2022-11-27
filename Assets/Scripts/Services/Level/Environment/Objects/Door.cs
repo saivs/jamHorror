@@ -7,7 +7,7 @@ public class Door : MonoBehaviour, IInteractable
         if (Player.Instance.Item is Key key)
         {
             Open();
-            Player.Instance.ConsumeItem();
+            Destroy(key.gameObject);
             return;
         }
 
