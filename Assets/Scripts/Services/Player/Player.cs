@@ -12,9 +12,13 @@ public class Player: MonoBehaviour
 
     public event Action OnDied;
 
+    public ItemHolder ItemHolder { get; private set; }
+
     private void Awake()
     {
         _instance = this;
+
+        ItemHolder = GetComponent<ItemHolder>();
     }
 
     public void InteractWithItem(IInteractable item)

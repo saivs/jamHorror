@@ -17,7 +17,7 @@ public class LevelController: MonoBehaviour
     public void TestPickBrush()
     {
         var brush = FindObjectOfType<Brush>();
-        _player.EquipItem(brush);
+        //_player.EquipItem(brush);
     }
 
     [ContextMenu("Test Interact With Can")]
