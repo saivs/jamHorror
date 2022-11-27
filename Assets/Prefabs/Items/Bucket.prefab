@@ -93,7 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4665920020986041379}
   - component: {fileID: 4665920020986041378}
-  - component: {fileID: 4137697937413605497}
+  - component: {fileID: 1691404868137425252}
   - component: {fileID: 9208749408575329791}
   m_Layer: 0
   m_Name: Bucket
@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _optionalHoldPivot: {fileID: 0}
---- !u!54 &4137697937413605497
+--- !u!54 &1691404868137425252
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
