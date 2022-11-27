@@ -27,7 +27,8 @@ public class Ebaka : MonoBehaviour, IInteractable
     private void PutOnBucket(Bucket bucket)
     {
         _blind = true;
-        Instantiate(bucket, _bucketPivot);
+        var instancedBucket = Instantiate(bucket, _bucketPivot);
+        instancedBucket.transform.localPosition = Vector3.zero;
     }
 
     private void KillPlayer()

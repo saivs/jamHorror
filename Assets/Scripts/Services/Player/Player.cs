@@ -37,6 +37,7 @@ public class Player: MonoBehaviour
         }
 
         _item = item;
+        _item.Pick();
     }
 
     private void UnequipItem()

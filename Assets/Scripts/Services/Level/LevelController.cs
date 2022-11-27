@@ -20,6 +20,13 @@ public class LevelController: MonoBehaviour
         _player.EquipItem(brush);
     }
 
+    [ContextMenu("Test Pick Bucket")]
+    public void TestInteractWithBucket()
+    {
+        var bucket = FindObjectOfType<Bucket>();
+        _player.EquipItem(bucket);
+    }
+
     [ContextMenu("Test Interact With Can")]
     public void TestInteractWithCan()
     {
@@ -32,6 +39,13 @@ public class LevelController: MonoBehaviour
     {
         var button = FindObjectOfType<QuestButton>();
         _player.InteractWithItem(button);
+    }
+
+    [ContextMenu("Test Interact With Ebaka")]
+    public void TestInteractWithEbaka()
+    {
+        var ebaka = FindObjectOfType<Ebaka>();
+        _player.InteractWithItem(ebaka);
     }
 
     private void Subscribe()
