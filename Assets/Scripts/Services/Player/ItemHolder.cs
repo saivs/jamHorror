@@ -36,6 +36,8 @@ public class ItemHolder : MonoBehaviour
         _pickupProgress = 0;
 
         item.OnPickup();
+
+        SoundConfig.Instance.ItemPick.PlayAtPoint(transform);
     }
 
     public void DropCurrentItem()
@@ -53,6 +55,8 @@ public class ItemHolder : MonoBehaviour
         {
             _currentDropForce = _dropForce;
             DropCurrentItem();
+
+            SoundConfig.Instance.ItemDrop.PlayAtPoint(transform);
         }
     }
 

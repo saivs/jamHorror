@@ -6,10 +6,11 @@ public class SoundPlayer : MonoBehaviour
     private static SoundPlayer _instance;
 
     [SerializeField] private AudioSource _source;
+    [SerializeField] private SoundConfig _config;
 
     private void Awake()
     {
         _instance = this;
-
+        _config.Initialize();
     }
 }

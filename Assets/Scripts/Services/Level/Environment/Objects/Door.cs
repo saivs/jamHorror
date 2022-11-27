@@ -16,11 +16,13 @@ public class Door : MonoBehaviour, IInteractable
 
     private void Open()
     {
+        SoundConfig.Instance.DoorOpen.PlayAtPoint(transform);
         Debug.Log("Door Open!");
     }
 
     private void CantOpen()
     {
+        SoundConfig.Instance.DoorCantOpen.PlayAtPoint(transform);
         Debug.Log("Door Closed!");
     }
 }

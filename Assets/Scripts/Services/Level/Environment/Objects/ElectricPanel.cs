@@ -28,22 +28,26 @@ public class ElectricPanel: MonoBehaviour
 
             if (_pressedSwitchersCount == _switchers.Count)
             {
-                TurnOnLight();
+                Fix();
             }
 
             return;
         }
 
-        KillPlayer();
+        Break();
     }
 
-    private void TurnOnLight()
+    private void Fix()
     {
+        SoundConfig.Instance.ElectricPanelFix.PlayAtPoint(transform);
+
         _basement.TurnOnLight();
     }
 
-    private void KillPlayer()
+    private void Break()
     {
+        SoundConfig.Instance.ElectricPanelBreak.PlayAtPoint(transform);
+
         Player.Instance.Kill();
     }
 }

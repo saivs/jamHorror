@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56399bbb6f3d102439be2cc61d5bdf0a, type: 3}
   m_Name: SoundConfig
   m_EditorClassIdentifier: 
+  WalkSoundInterval: 1
+  Music: {fileID: 8300000, guid: c772c560c62d8ae41ba2a9f90546020c, type: 3}
+  Walk: {fileID: 8300000, guid: 6771b3aa434051544a0dbff1cd8ff4d2, type: 3}
+  DemonSpell: {fileID: 8300000, guid: c772c560c62d8ae41ba2a9f90546020c, type: 3}
   ItemPick: {fileID: 8300000, guid: c772c560c62d8ae41ba2a9f90546020c, type: 3}
   ItemDrop: {fileID: 8300000, guid: c772c560c62d8ae41ba2a9f90546020c, type: 3}
   ElectricPanelPressButton: {fileID: 8300000, guid: c772c560c62d8ae41ba2a9f90546020c, type: 3}

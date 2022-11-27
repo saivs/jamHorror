@@ -33,6 +33,7 @@ public class Ebaka : MonoBehaviour, IInteractable
 
     private void KillPlayer()
     {
+        SoundConfig.Instance.EbakaHit.PlayAtPoint(transform);
         Player.Instance.Kill();
     }
 

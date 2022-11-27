@@ -27,7 +27,7 @@ public class ElectricPanelSwitcher : MonoBehaviour, IInteractable
         float angle = -_button.transform.localRotation.eulerAngles.z * 2;
         _button.RotateAround(_buttonRotatePivot.position, Vector3.forward, angle);
 
-        AudioSource.PlayClipAtPoint(SoundConfig.Instance.ElectricPanelPressButton, transform.position);
+        SoundConfig.Instance.ElectricPanelPressButton.PlayAtPoint(transform);
 
         OnPressed?.Invoke();
     }

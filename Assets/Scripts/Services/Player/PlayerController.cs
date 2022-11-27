@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -13,6 +11,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private Transform _horizontalLook;
 
+    private float _walkSoundTimer;
+
     private void Awake()
     {
         _characterController = GetComponent<CharacterController>();
@@ -20,7 +20,6 @@ public class PlayerController : MonoBehaviour
 
     public void Update()
     {
-        
         Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         Vector3 horizontalDirection = new Vector3(moveInput.x, 0, moveInput.y).normalized * _moveSpeed;
         Vector3 verticalDiraction = new Vector3(0, -_stickToGroundForce, 0);
@@ -28,5 +27,24 @@ public class PlayerController : MonoBehaviour
         Vector3 moveVector = _horizontalLook.rotation * (horizontalDirection + verticalDiraction);
 
         _characterController.Move(moveVector * Time.deltaTime);
+
+        TryPlayWalkSound(_characterController.velocity.magnitude > 0.1f);
+    }
+
+    private void TryPlayWalkSound(bool moved)
+    {
+        if (moved)
+        {
+            _walkSoundTimer += Time.deltaTime;
+            if (_walkSoundTimer > SoundConfig.Instance.WalkSoundInterval)
+            {
+                _walkSoundTimer = 0f;
+                SoundConfig.Instance.Walk.PlayAtPoint(transform);
+            }
+        }
+        else
+        {
+            _walkSoundTimer = 0f;
+        }
     }
 }
