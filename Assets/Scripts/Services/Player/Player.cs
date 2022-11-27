@@ -6,7 +6,7 @@ public class Player: MonoBehaviour
     public static Player Instance => _instance;
     private static Player _instance;
 
-    [SerializeField] private PlayerConfig _config;
+    [SerializeField] private DrunkConfig _drunkConfig;
 
     private IPickable _item;
     private int _beerCount;
@@ -54,7 +54,7 @@ public class Player: MonoBehaviour
         _beerCount++;
         OnDrunkBeer?.Invoke(_beerCount);
 
-        if (_beerCount == _config.MaxBeerCount)
+        if (_beerCount == _drunkConfig.MaxBeerCount)
         {
             Kill();
         }

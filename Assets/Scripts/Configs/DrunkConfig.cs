@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
-[CreateAssetMenu(menuName = "Configs/" + nameof(PlayerConfig))]
-public class PlayerConfig : ScriptableObject
+[CreateAssetMenu(menuName = "Configs/" + nameof(DrunkConfig))]
+public class DrunkConfig : ScriptableObject
 {
     [SerializeField] private int _maxBeerCount;
 
