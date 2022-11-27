@@ -10,9 +10,9 @@ public class Can : MonoBehaviour, IInteractable
         _meshRenderer.material.color = _config.Color;
     }
 
-    public void Interact(IPlayer player)
+    public void Interact()
     {
-        if (player.Item is Brush brush)
+        if (Player.Instance.Item is Brush brush)
         {
             brush.Paint(_config.Color);
             return;

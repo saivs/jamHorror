@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-public class Player: MonoBehaviour, IPlayer
+public class Player: MonoBehaviour
 {
     public static Player Instance => _instance;
     private static Player _instance;
@@ -19,7 +19,7 @@ public class Player: MonoBehaviour, IPlayer
 
     public void InteractWithItem(IInteractable item)
     {
-        item.Interact(this);
+        item.Interact();
     }
 
     public void ConsumeItem()

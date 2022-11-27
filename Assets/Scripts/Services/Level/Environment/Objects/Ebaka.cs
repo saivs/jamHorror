@@ -12,12 +12,12 @@ public class Ebaka : MonoBehaviour, IInteractable
         _pickableItem.OnPicked += OnItemPicked;
     }
 
-    public void Interact(IPlayer player)
+    public void Interact()
     {
-        if (player.Item is Bucket bucket)
+        if (Player.Instance.Item is Bucket bucket)
         {
             PutOnBucket(bucket);
-            player.ConsumeItem();
+            Player.Instance.ConsumeItem();
             return;
         }
 

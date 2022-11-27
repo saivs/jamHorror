@@ -6,21 +6,21 @@ public class QuestButton : MonoBehaviour, IInteractable
 
     private bool _painted;
 
-    public void Interact(IPlayer player)
+    public void Interact()
     {
         if (!_painted)
         {
-            if (player.Item is Brush brush)
+            if (Player.Instance.Item is Brush brush)
             {
                 if (brush.Painted)
                 {
                     Paint(brush.CurrentColor);
-                    player.ConsumeItem();
+                    Player.Instance.ConsumeItem();
                     return;
                 }
             }
         }
-        Press(player);
+        Press();
     }
 
     private void Paint(Color color)
@@ -29,7 +29,7 @@ public class QuestButton : MonoBehaviour, IInteractable
         _meshRenderer.material.color = color;
     }
 
-    private void Press(IPlayer player)
+    private void Press()
     {
         if (_painted)
         {
@@ -37,7 +37,7 @@ public class QuestButton : MonoBehaviour, IInteractable
         }
         else
         {
-            player.Kill();
+            Player.Instance.Kill();
         }
     }
 }
