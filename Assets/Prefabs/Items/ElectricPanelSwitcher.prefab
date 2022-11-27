@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1381731465566307612}
   - component: {fileID: 1381731465566307611}
   - component: {fileID: 8574991454407995171}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ElectricPanelSwitcher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,7 +123,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4680625404332497926}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ButtonRotatePivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 8373241887930372889}
   - component: {fileID: 653799105351077989}
   - component: {fileID: 8411694476083052378}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2254240751504735824}
   - component: {fileID: 2254240751504735827}
   - component: {fileID: 139810230792156624}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: QuestButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 2254240752487287063}
   - component: {fileID: 2254240752487287056}
   - component: {fileID: 2254240752487287057}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -155,7 +155,7 @@ GameObject:
   - component: {fileID: 2254240752515288612}
   - component: {fileID: 2254240752515288609}
   - component: {fileID: 2254240752515288614}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}

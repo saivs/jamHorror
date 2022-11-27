@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 440534850085355349}
   - component: {fileID: 440534850085355339}
   - component: {fileID: 440534850085355338}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 7552654946981871518}
   - component: {fileID: 7552654946981871506}
   - component: {fileID: 6663402600646152631}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Beer
   m_TagString: Untagged
   m_Icon: {fileID: 0}

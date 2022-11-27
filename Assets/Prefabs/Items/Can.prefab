@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7688754530755052969}
   - component: {fileID: 7688754530755052982}
   - component: {fileID: 7688754530755052983}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 7688754530981231817}
   - component: {fileID: 6176581543821873925}
   - component: {fileID: 2857545851406775912}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Can
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 7688754531546423977}
   - component: {fileID: 7688754531546423990}
   - component: {fileID: 7688754531546423991}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Paint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

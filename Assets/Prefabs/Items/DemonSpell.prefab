@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4154748898825965589}
   - component: {fileID: 4154748898825965588}
   - component: {fileID: 5750740529124702686}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DemonSpell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,7 +70,7 @@ GameObject:
   - component: {fileID: 8652493601623260772}
   - component: {fileID: 8652493601623260762}
   - component: {fileID: 8652493601623260763}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Quad
   m_TagString: Untagged
   m_Icon: {fileID: 0}

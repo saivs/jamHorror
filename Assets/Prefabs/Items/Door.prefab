@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3771177767871160199}
   - component: {fileID: 3771177767871160216}
   - component: {fileID: 3771177767871160217}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 3771177768097982183}
   - component: {fileID: 824675221704968976}
   - component: {fileID: 683133393706295475}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
