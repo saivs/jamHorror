@@ -9,7 +9,7 @@ public class Ebaka : MonoBehaviour, IInteractable
 
     private void Awake()
     {
-        _pickableItem.OnPicked += OnItemPicked;
+        //_pickableItem.OnPicked += OnItemPicked;
     }
 
     public void Interact()

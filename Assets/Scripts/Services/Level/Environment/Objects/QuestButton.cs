@@ -20,6 +20,7 @@ public class QuestButton : MonoBehaviour, IInteractable
                 }
             }
         }
+
         Press();
     }
 
