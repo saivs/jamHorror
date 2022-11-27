@@ -13,6 +13,21 @@ public class LevelController: MonoBehaviour
         Subscribe();
     }
 
+    private void Subscribe()
+    {
+        _player.OnDied += Lose;
+    }
+
+    public void Win()
+    {
+        Debug.Log("Win");
+    }
+
+    public void Lose()
+    {
+        Debug.Log("Lose");
+    }
+
     [ContextMenu("Test Pick Brush")]
     public void TestPickBrush()
     {
@@ -62,18 +77,20 @@ public class LevelController: MonoBehaviour
         _player.InteractWithItem(door);
     }
 
-    private void Subscribe()
+    [ContextMenu("Test Interact With Demon Spell")]
+    public void TestInteractWithDemonSpell()
     {
-        _player.OnDied += Lose;
+        var demonSpell = FindObjectOfType<DemonSpell>();
+        _player.InteractWithItem(demonSpell);
     }
 
-    public void Win()
+    [ContextMenu("Test Interact With Beer")]
+    public void TestInteractWithBeer()
     {
-        Debug.Log("Win");
-    }
-
-    public void Lose()
-    {
-        Debug.Log("Lose");
+        var beer = FindObjectOfType<Beer>();
+        if (beer != null)
+        {
+            _player.InteractWithItem(beer);
+        }
     }
 }

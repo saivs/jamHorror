@@ -6,11 +6,15 @@ public class Player: MonoBehaviour
     public static Player Instance => _instance;
     private static Player _instance;
 
+    [SerializeField] private PlayerConfig _config;
+
     private IPickable _item;
+    private int _beerCount;
 
     public IPickable Item => _item;
 
     public event Action OnDied;
+    public event Action<int> OnDrunkBeer;
 
     private void Awake()
     {
@@ -43,6 +47,17 @@ public class Player: MonoBehaviour
     private void UnequipItem()
     {
         _item = null;
+    }
+
+    public void DrinkBeer()
+    {
+        _beerCount++;
+        OnDrunkBeer?.Invoke(_beerCount);
+
+        if (_beerCount == _config.MaxBeerCount)
+        {
+            Kill();
+        }
     }
 
     public void Kill()
