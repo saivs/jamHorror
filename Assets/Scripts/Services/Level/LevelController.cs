@@ -1,53 +1,51 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Assets.Scripts.Services.Game
+public class LevelController: MonoBehaviour 
 {
-    public class LevelController: MonoBehaviour 
+    public static LevelController Instance => _instance;
+    private static LevelController _instance;
+
+    [SerializeField] private Player _player;
+
+    private void Awake()
     {
-        [SerializeField] private QuestButton _questButton;
-        [SerializeField] private Player _player;
+        _instance = this;
+        Subscribe();
+    }
 
-        private void Start()
-        {
-            Subscribe();
-        }
+    [ContextMenu("Test Pick Brush")]
+    public void TestPickBrush()
+    {
+        var brush = FindObjectOfType<Brush>();
+        _player.EquipItem(brush);
+    }
 
-        [ContextMenu("Test Pick Brush")]
-        public void TestPickBrush()
-        {
-            var brush = FindObjectOfType<Brush>();
-            _player.PickItem(brush);
-        }
+    [ContextMenu("Test Interact With Can")]
+    public void TestInteractWithCan()
+    {
+        var can = FindObjectOfType<Can>();
+        _player.InteractWithItem(can);
+    }
 
-        [ContextMenu("Test Interact With Can")]
-        public void TestInteractWithCan()
-        {
-            var can = FindObjectOfType<Can>();
-            _player.InteractWithItem(can);
-        }
+    [ContextMenu("Test Interact With Button")]
+    public void TestInteractWithButton()
+    {
+        var button = FindObjectOfType<QuestButton>();
+        _player.InteractWithItem(button);
+    }
 
-        [ContextMenu("Test Interact With Button")]
-        public void TestInteractWithButton()
-        {
-            var button = FindObjectOfType<QuestButton>();
-            _player.InteractWithItem(button);
-        }
+    private void Subscribe()
+    {
+        _player.OnDied += Lose;
+    }
 
-        private void Subscribe()
-        {
-            _questButton.OnActivated += Win;
-            _player.OnDied += Lose;
-        }
+    public void Win()
+    {
+        Debug.Log("Win");
+    }
 
-        private void Win()
-        {
-            Debug.Log("Win");
-        }
-
-        private void Lose()
-        {
-            Debug.Log("Lose");
-        }
+    public void Lose()
+    {
+        Debug.Log("Lose");
     }
 }

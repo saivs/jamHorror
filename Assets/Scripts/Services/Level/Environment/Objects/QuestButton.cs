@@ -1,13 +1,10 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class QuestButton : Item, IInteractable
+public class QuestButton : MonoBehaviour, IInteractable
 {
     [SerializeField] private MeshRenderer _meshRenderer;
 
     private bool _painted;
-
-    public event Action OnActivated;
 
     public void Interact(IPlayer player)
     {
@@ -18,6 +15,7 @@ public class QuestButton : Item, IInteractable
                 if (brush.Painted)
                 {
                     Paint(brush.CurrentColor);
+                    player.ConsumeItem();
                     return;
                 }
             }
@@ -35,7 +33,7 @@ public class QuestButton : Item, IInteractable
     {
         if (_painted)
         {
-            OnActivated?.Invoke();
+            LevelController.Instance.Win();
         }
         else
         {

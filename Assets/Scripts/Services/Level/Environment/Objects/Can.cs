@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Can : Item, IInteractable
+public class Can : MonoBehaviour, IInteractable
 {
     [SerializeField] private CanConfig _config;
     [SerializeField] private MeshRenderer _meshRenderer;

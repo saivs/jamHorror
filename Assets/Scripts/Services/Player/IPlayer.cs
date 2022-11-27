@@ -7,7 +7,8 @@ public interface IPlayer
     event Action OnDied;
 
     void InteractWithItem(IInteractable item);
-    void PickItem(IPickable item);
+    void EquipItem(IPickable item);
+    void ConsumeItem();
 
     void Kill();
 }

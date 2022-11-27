@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class Brush: Item, IPickable
+public class Brush : Item
 {
     [SerializeField] private BrushConfig _config;
     [SerializeField] private MeshRenderer _colorRenderer;
