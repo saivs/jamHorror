@@ -24,11 +24,6 @@ public class Player: MonoBehaviour
         ItemHolder = GetComponent<ItemHolder>();
     }
 
-    public void InteractWithItem(IInteractable item)
-    {
-        item.Interact();
-    }
-
     public void DrinkBeer()
     {
         _beerCount++;
