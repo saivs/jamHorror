@@ -9,7 +9,7 @@ public class Ebaka : MonoBehaviour, IInteractable
 
     private void Awake()
     {
-        _pickableItem.OnPicked += OnItemPicked;
+        _pickableItem.OnPickedUp += OnItemPickedUp;
     }
 
     public void Interact()
@@ -17,7 +17,7 @@ public class Ebaka : MonoBehaviour, IInteractable
         if (Player.Instance.Item is Bucket bucket)
         {
             PutOnBucket(bucket);
-            Player.Instance.ConsumeItem();
+            Destroy(bucket.gameObject);
             return;
         }
 
@@ -27,7 +27,8 @@ public class Ebaka : MonoBehaviour, IInteractable
     private void PutOnBucket(Bucket bucket)
     {
         _blind = true;
-        Instantiate(bucket, _bucketPivot);
+        var instancedBucket = Instantiate(bucket, _bucketPivot);
+        instancedBucket.transform.localPosition = Vector3.zero;
     }
 
     private void KillPlayer()
@@ -35,7 +36,7 @@ public class Ebaka : MonoBehaviour, IInteractable
         Player.Instance.Kill();
     }
 
-    private void OnItemPicked()
+    private void OnItemPickedUp()
     {
         if (!_blind)
         {

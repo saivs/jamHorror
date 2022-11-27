@@ -6,15 +6,22 @@ public class Player: MonoBehaviour
     public static Player Instance => _instance;
     private static Player _instance;
 
-    private IPickable _item;
+    [SerializeField] private DrunkConfig _drunkConfig;
 
-    public IPickable Item => _item;
+    private int _beerCount;
+
+    public Item Item => ItemHolder.Item;
 
     public event Action OnDied;
+    public event Action<int> OnDrunkBeer;
+
+    public ItemHolder ItemHolder { get; private set; }
 
     private void Awake()
     {
         _instance = this;
+
+        ItemHolder = GetComponent<ItemHolder>();
     }
 
     public void InteractWithItem(IInteractable item)
@@ -22,26 +29,15 @@ public class Player: MonoBehaviour
         item.Interact();
     }
 
-    public void ConsumeItem()
+    public void DrinkBeer()
     {
-        var item = _item;
-        UnequipItem();
-        Destroy(item.gameObject);
-    }
+        _beerCount++;
+        OnDrunkBeer?.Invoke(_beerCount);
 
-    public void EquipItem(IPickable item)
-    {
-        if (_item != null)
+        if (_beerCount == _drunkConfig.MaxBeerCount)
         {
-            UnequipItem();
+            Kill();
         }
-
-        _item = item;
-    }
-
-    private void UnequipItem()
-    {
-        _item = null;
     }
 
     public void Kill()

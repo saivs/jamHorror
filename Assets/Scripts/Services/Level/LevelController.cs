@@ -13,27 +13,6 @@ public class LevelController: MonoBehaviour
         Subscribe();
     }
 
-    [ContextMenu("Test Pick Brush")]
-    public void TestPickBrush()
-    {
-        var brush = FindObjectOfType<Brush>();
-        _player.EquipItem(brush);
-    }
-
-    [ContextMenu("Test Interact With Can")]
-    public void TestInteractWithCan()
-    {
-        var can = FindObjectOfType<Can>();
-        _player.InteractWithItem(can);
-    }
-
-    [ContextMenu("Test Interact With Button")]
-    public void TestInteractWithButton()
-    {
-        var button = FindObjectOfType<QuestButton>();
-        _player.InteractWithItem(button);
-    }
-
     private void Subscribe()
     {
         _player.OnDied += Lose;
