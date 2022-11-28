@@ -35,7 +35,6 @@ public class SoundConfig : ScriptableObject
 
     [Header("Beer")]
     public AudioClip BeerDrink;
-    public AudioClip BeerDrinkLast;
 
     [Header("Door")]
     public AudioClip DoorOpen;

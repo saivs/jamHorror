@@ -27,16 +27,13 @@ public class Player: MonoBehaviour
     public void DrinkBeer()
     {
         _beerCount++;
+        SoundConfig.Instance.BeerDrink.PlayAtPoint(transform);
+
         OnDrunkBeer?.Invoke(_beerCount);
 
         if (_beerCount == _drunkConfig.MaxBeerCount)
         {
-            SoundConfig.Instance.BeerDrinkLast.PlayAtPoint(transform);
             Kill();
-        }
-        else
-        {
-            SoundConfig.Instance.BeerDrink.PlayAtPoint(transform);
         }
     }
 
