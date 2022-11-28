@@ -22,12 +22,15 @@ public class Brush : Item
     public void Paint(Color color)
     {
         SetPainted(true, color);
+        SoundConfig.Instance.BrushPaint.PlayAtPoint(transform);
+
         StartCoroutine(ClearTimerCoroutine());
     }
 
     private void Clear()
     {
         SetPainted(false, _clearColor);
+        SoundConfig.Instance.BrushClear.PlayAtPoint(transform);
     }
 
     private IEnumerator ClearTimerCoroutine()
