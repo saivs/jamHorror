@@ -542,6 +542,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 824675221704968976, guid: d0dc9da2f2686d74aa7bd2fc0de882b8, type: 3}
+      propertyPath: KeyItemToUnlock
+      value: 
+      objectReference: {fileID: 1921495803}
     - target: {fileID: 3771177768097982180, guid: d0dc9da2f2686d74aa7bd2fc0de882b8, type: 3}
       propertyPath: m_Name
       value: Door
@@ -646,6 +650,10 @@ PrefabInstance:
     - target: {fileID: 2756865675500209094, guid: f5c057cec3c28294bb914339ec0830e5, type: 3}
       propertyPath: m_Name
       value: Key
+      objectReference: {fileID: 0}
+    - target: {fileID: 2764848627373072745, guid: f5c057cec3c28294bb914339ec0830e5, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5c057cec3c28294bb914339ec0830e5, type: 3}
@@ -1027,6 +1035,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f05811b24bfafd48844edf2d28e69fe, type: 3}
+--- !u!114 &1921495803 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7295809272526468607, guid: f5c057cec3c28294bb914339ec0830e5, type: 3}
+  m_PrefabInstance: {fileID: 955305193}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33b2cb21a6f5e1c48b86bc04118fde25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1928774718
 GameObject:
   m_ObjectHideFlags: 0
