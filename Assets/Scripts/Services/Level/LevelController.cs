@@ -10,7 +10,10 @@ public class LevelController: MonoBehaviour
     private void Awake()
     {
         _instance = this;
+        
         Subscribe();
+
+        MouseLookLock.ResetLock();
     }
 
     private void Subscribe()

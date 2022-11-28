@@ -1,14 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class UIcontroller : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private GameObject _screen;
+
+    private void Awake()
     {
-        
+        SetActiveMenu(false); 
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Show();
+        }
+    }
+
+    public void GoToContinue()
+    {
+        Hide();
     }
 
     public void GoToExit(){
@@ -19,9 +31,21 @@ public class UIcontroller : MonoBehaviour
         SceneManager.LoadScene("Level");
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Show()
     {
-        
+        MouseLookLock.AddLock();
+        SetActiveMenu(true);
+    }
+
+    private void Hide()
+    {
+        MouseLookLock.RemoveLock();
+        SetActiveMenu(false);
+    }
+
+    private void SetActiveMenu(bool active)
+    {
+        _screen.SetActive(active);
+        Time.timeScale = active ? 0f : 1f;
     }
 }

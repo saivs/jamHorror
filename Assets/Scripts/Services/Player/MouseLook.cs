@@ -34,8 +34,8 @@ public class MouseLook : MonoBehaviour
             _verticalLook.localRotation = Quaternion.Euler(_pitch, 0, 0);
         }
 
-        //Cursor.lockState = MouseLookLock.IsLocked ? CursorLockMode.None : CursorLockMode.Locked;
-        //Cursor.visible = MouseLookLock.IsLocked;
+        Cursor.lockState = MouseLookLock.IsLocked ? CursorLockMode.None : CursorLockMode.Locked;
+        Cursor.visible = MouseLookLock.IsLocked;
     }
 
 
