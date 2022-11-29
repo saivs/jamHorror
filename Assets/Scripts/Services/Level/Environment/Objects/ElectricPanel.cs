@@ -48,6 +48,6 @@ public class ElectricPanel: MonoBehaviour
     {
         SoundConfig.Instance.ElectricPanelBreak.PlayAtPoint(transform);
 
-        Player.Instance.Kill();
+        Player.Instance.Kill(DeathMessageConfig.Instance.ElectricPanel);
     }
 }

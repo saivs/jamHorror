@@ -12,7 +12,7 @@ public class Player: MonoBehaviour
 
     public Item Item => ItemHolder.Item;
 
-    public event Action OnDied;
+    public event Action<string> OnDied;
     public event Action<int> OnDrunkBeer;
 
     public ItemHolder ItemHolder { get; private set; }
@@ -33,12 +33,12 @@ public class Player: MonoBehaviour
 
         if (_beerCount == _drunkConfig.MaxBeerCount)
         {
-            Kill();
+            Kill(DeathMessageConfig.Instance.Beer);
         }
     }
 
-    public void Kill()
+    public void Kill(string message)
     {
-        OnDied?.Invoke();
+        OnDied?.Invoke(message);
     }
 }

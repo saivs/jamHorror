@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class LevelController: MonoBehaviour 
 {
@@ -6,12 +7,14 @@ public class LevelController: MonoBehaviour
     private static LevelController _instance;
 
     [SerializeField] private Player _player;
+    [SerializeField] private List<SingletonConfig> _configs;
 
     private void Awake()
     {
         _instance = this;
         
         Subscribe();
+        InitializeConfigs();
 
         MouseLookLock.ResetLock();
     }
@@ -21,13 +24,21 @@ public class LevelController: MonoBehaviour
         _player.OnDied += Lose;
     }
 
-    public void Win()
+    private void InitializeConfigs()
     {
-        Debug.Log("Win");
+        foreach (var config in _configs)
+        {
+            config.Initialize();
+        }
     }
 
-    public void Lose()
+    public void Win()
     {
-        Debug.Log("Lose");
+        UiController.Instance.ShowWin();
+    }
+
+    public void Lose(string message)
+    {
+        UiController.Instance.ShowLose(message);
     }
 }

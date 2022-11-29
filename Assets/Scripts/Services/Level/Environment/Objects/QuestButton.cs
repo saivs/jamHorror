@@ -40,7 +40,7 @@ public class QuestButton : MonoBehaviour, IInteractable
         else
         {
             SoundConfig.Instance.ButtonPressBad.PlayAtPoint(transform);
-            Player.Instance.Kill();
+            Player.Instance.Kill(DeathMessageConfig.Instance.TouchRedButton);
         }
     }
 }
