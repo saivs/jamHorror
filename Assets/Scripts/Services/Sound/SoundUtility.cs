@@ -6,4 +6,9 @@ public static class SoundUtility
     {
         AudioSource.PlayClipAtPoint(clip, transform.position);
     }
+
+    public static void PlayGlobal(this AudioClip clip)
+    {
+        SoundPlayer.Instance.PlayGlobal(clip);
+    }
 }

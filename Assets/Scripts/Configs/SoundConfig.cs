@@ -1,17 +1,24 @@
 ﻿using UnityEngine;
 
 [CreateAssetMenu(menuName = "Configs/" + nameof(SoundConfig))]
-public class SoundConfig : ScriptableObject
+public class SoundConfig : SingletonConfig
 {
     public static SoundConfig Instance => _instance;
     private static SoundConfig _instance;
 
     public int WalkSoundInterval;
 
-    [Header("Long Audio")]
-    public AudioClip Music;
-    public AudioClip Walk;
-    public AudioClip DemonSpell;
+    [Header("Music")]
+    public AudioClip MusicLevel;
+    public AudioClip MusicBasement;
+    public AudioClip MusicEbakaStanding;
+    public AudioClip MusicEbakaDancing;
+
+    [Header("Player")]
+    public AudioClip PlayerWalk;
+    public AudioClip PlayerDemonSpell;
+    public AudioClip PlayerDeath;
+    public AudioClip PlayerWin;
 
     [Header("Item")]
     public AudioClip ItemPick;
@@ -43,7 +50,7 @@ public class SoundConfig : ScriptableObject
     [Header("Screamer")]
     public AudioClip Screamer;
 
-    public void Initialize()
+    public override void Initialize()
     {
         _instance = this;
     }

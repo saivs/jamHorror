@@ -18,7 +18,7 @@ public class Basement: MonoBehaviour
     {
         if (!_lightIsOn)
         {
-            Player.Instance.Kill();
+            Player.Instance.Kill(DeathMessageConfig.Instance.DarkBasement);
         }
     }
 

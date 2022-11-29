@@ -21,7 +21,7 @@ public class Ebaka : MonoBehaviour, IInteractable
             return;
         }
 
-        KillPlayer();
+        KillPlayer(DeathMessageConfig.Instance.EbakaHit);
     }
 
     private void PutOnBucket(Bucket bucket)
@@ -31,17 +31,17 @@ public class Ebaka : MonoBehaviour, IInteractable
         instancedBucket.transform.localPosition = Vector3.zero;
     }
 
-    private void KillPlayer()
+    private void KillPlayer(string message)
     {
         SoundConfig.Instance.EbakaHit.PlayAtPoint(transform);
-        Player.Instance.Kill();
+        Player.Instance.Kill(message);
     }
 
     private void OnItemPickedUp()
     {
         if (!_blind)
         {
-            KillPlayer();
+            KillPlayer(DeathMessageConfig.Instance.EbakaBrush);
         }
     }
 }

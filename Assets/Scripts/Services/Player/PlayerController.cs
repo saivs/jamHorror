@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
             if (_walkSoundTimer > SoundConfig.Instance.WalkSoundInterval)
             {
                 _walkSoundTimer = 0f;
-                SoundConfig.Instance.Walk.PlayAtPoint(transform);
+                SoundConfig.Instance.PlayerWalk.PlayAtPoint(transform);
             }
         }
         else
