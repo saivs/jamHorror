@@ -34,12 +34,12 @@ public class QuestButton : MonoBehaviour, IInteractable
     {
         if (_painted)
         {
-            SoundConfig.Instance.ButtonPressGood.PlayAtPoint(transform);
+            SoundConfig.Instance.ButtonPressGood.PlayOneShotAtPoint(transform);
             LevelController.Instance.Win();
         }
         else
         {
-            SoundConfig.Instance.ButtonPressBad.PlayAtPoint(transform);
+            SoundConfig.Instance.ButtonPressBad.PlayOneShotAtPoint(transform);
             Player.Instance.Kill(DeathMessageConfig.Instance.TouchRedButton);
         }
     }

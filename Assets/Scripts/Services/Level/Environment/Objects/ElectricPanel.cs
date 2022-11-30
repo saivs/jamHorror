@@ -39,14 +39,14 @@ public class ElectricPanel: MonoBehaviour
 
     private void Fix()
     {
-        SoundConfig.Instance.ElectricPanelFix.PlayAtPoint(transform);
+        SoundConfig.Instance.ElectricPanelFix.PlayOneShotAtPoint(transform);
 
         _basement.TurnOnLight();
     }
 
     private void Break()
     {
-        SoundConfig.Instance.ElectricPanelBreak.PlayAtPoint(transform);
+        SoundConfig.Instance.ElectricPanelBreak.PlayOneShotAtPoint(transform);
 
         Player.Instance.Kill(DeathMessageConfig.Instance.ElectricPanel);
     }

@@ -27,7 +27,7 @@ public class Player: MonoBehaviour
     public void DrinkBeer()
     {
         _beerCount++;
-        SoundConfig.Instance.BeerDrink.PlayAtPoint(transform);
+        SoundConfig.Instance.BeerDrink.PlayOneShotAtPoint(transform);
 
         OnDrunkBeer?.Invoke(_beerCount);
 

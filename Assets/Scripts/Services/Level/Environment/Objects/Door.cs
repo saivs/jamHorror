@@ -67,12 +67,12 @@ public class Door : MonoBehaviour, IInteractable
         _isLocked = false;
 
         Destroy(KeyItemToUnlock.gameObject);
-        SoundConfig.Instance.DoorOpen.PlayAtPoint(transform);
+        SoundConfig.Instance.DoorOpen.PlayOneShotAtPoint(transform);
     }
 
     private void CantOpen()
     {
-        SoundConfig.Instance.DoorCantOpen.PlayAtPoint(transform);
+        SoundConfig.Instance.DoorCantOpen.PlayOneShotAtPoint(transform);
     }
 
     private void Update()
