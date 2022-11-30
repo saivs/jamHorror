@@ -12,10 +12,11 @@ public class UiController : MonoBehaviour
 
     [SerializeField] private GameObject _gameplayScreen;
     [SerializeField] private GameObject _screen;
-    [SerializeField] private Image _endBackground;
 
+    [SerializeField] private Image _endBackground;
     [SerializeField] private GameObject _pauseBlock;
     [SerializeField] private GameObject _loseBlock;
+    [SerializeField] private DialogPopup _dialogPopup;
 
     [SerializeField] private TMP_Text _loseYouDied;
     [SerializeField] private TMP_Text _loseMessage;
@@ -25,7 +26,7 @@ public class UiController : MonoBehaviour
     {
         _instance = this;
 
-        SetActiveScreen(false);
+        SetActiveScreen(false, true);
     }
 
     private void Update()
@@ -51,17 +52,30 @@ public class UiController : MonoBehaviour
         SceneManager.LoadScene("Level");
     }
 
+    public void ShowDialog(string message, Action yes, Action no)
+    {
+        Show(true);
+
+        _dialogPopup.Show(message, () => 
+            { 
+                Hide(true); 
+                yes?.Invoke();
+            }, () => 
+            { 
+                Hide(true); 
+                no?.Invoke();
+            });
+    }
+
     public void ShowPause()
     {
-        Show();
+        Show(true);
         _pauseBlock.SetActive(true);
-        SetTimeScale(false);
     }
 
     public void HidePause()
     {
-        Hide();
-        SetTimeScale(true);
+        Hide(true);
     }
 
     public void ShowWin()
@@ -138,35 +152,35 @@ public class UiController : MonoBehaviour
         }
     }
 
-    private void Show()
+    private void Show(bool setTimeScale = false)
     {
         MouseLookLock.AddLock();
-        SetActiveScreen(true);
+        SetActiveScreen(true, setTimeScale);
         _loseBlock.SetActive(false);
         _pauseBlock.SetActive(false);
         _endBackground.gameObject.SetActive(false);
     }
 
-    private void Hide()
+    private void Hide(bool setTimeScale = false)
     {
         MouseLookLock.RemoveLock();
-        SetActiveScreen(false);
+        SetActiveScreen(false, setTimeScale);
     }
 
-    private void SetActiveScreen(bool active)
+    private void SetActiveScreen(bool active, bool setTimeScale)
     {
         _screen.SetActive(active);
         _gameplayScreen.SetActive(!active);
+
+        if (setTimeScale)
+        {
+            Time.timeScale = active ? 0f : 1f;
+        }
     }
 
     private bool IsScreenActive()
     {
         return _screen.active;
-    }
-
-    private void SetTimeScale(bool active)
-    {
-        Time.timeScale = active ? 1f : 0f;
     }
 
     private void StopAllSounds()

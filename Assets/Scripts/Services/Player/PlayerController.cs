@@ -20,6 +20,11 @@ public class PlayerController : MonoBehaviour
 
     public void Update()
     {
+        if (MouseLookLock.IsLocked)
+        {
+            return;
+        }
+
         Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         Vector3 horizontalDirection = new Vector3(moveInput.x, 0, moveInput.y).normalized * _moveSpeed;
         Vector3 verticalDiraction = new Vector3(0, -_stickToGroundForce, 0);
