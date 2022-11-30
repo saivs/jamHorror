@@ -75,7 +75,7 @@ public class UiController : MonoBehaviour
     {
         _endBackground.enabled = false;
 
-        SoundConfig.Instance.PlayerWin.PlayGlobal();
+        SoundConfig.Instance.PlayerWin.PlayOneShot();
 
         yield return new WaitForSeconds(1.5f);
 
@@ -106,7 +106,7 @@ public class UiController : MonoBehaviour
 
         yield return new WaitForSeconds(1.5f);
 
-        SoundConfig.Instance.PlayerDeath.PlayGlobal();
+        SoundConfig.Instance.PlayerDeath.PlayOneShot();
 
         _endBackground.enabled = true;
         yield return StartCoroutine(FadeUi(_endBackground.color, 1f, color => _endBackground.color = color));

@@ -14,7 +14,17 @@ public class SoundPlayer : MonoBehaviour
         _config.Initialize();
     }
 
-    public void PlayGlobal(AudioClip clip)
+    private void Start()
+    {
+        
+    }
+
+    public void Play(AudioClip clip)
+    {
+        //_source.Play(clip);
+    }
+
+    public void PlayOneShotGlobal(AudioClip clip)
     {
         _source.PlayOneShot(clip);
     }

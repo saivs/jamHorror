@@ -22,7 +22,7 @@ public class Brush : Item
     public void Paint(Color color)
     {
         SetPainted(true, color);
-        SoundConfig.Instance.BrushPaint.PlayAtPoint(transform);
+        SoundConfig.Instance.BrushPaint.PlayOneShotAtPoint(transform);
 
         StartCoroutine(ClearTimerCoroutine());
     }
@@ -30,7 +30,7 @@ public class Brush : Item
     private void Clear()
     {
         SetPainted(false, _clearColor);
-        SoundConfig.Instance.BrushClear.PlayAtPoint(transform);
+        SoundConfig.Instance.BrushClear.PlayOneShotAtPoint(transform);
     }
 
     private IEnumerator ClearTimerCoroutine()
