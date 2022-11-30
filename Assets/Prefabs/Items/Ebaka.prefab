@@ -106,6 +106,10 @@ PrefabInstance:
       value: StandingEbakaAudio
       objectReference: {fileID: 0}
     - target: {fileID: 578618196267063148, guid: 0f5ce2ff2a19e04499f3f672af41f9f4, type: 3}
+      propertyPath: m_Volume
+      value: 0.535
+      objectReference: {fileID: 0}
+    - target: {fileID: 578618196267063148, guid: 0f5ce2ff2a19e04499f3f672af41f9f4, type: 3}
       propertyPath: MaxDistance
       value: 4.332188
       objectReference: {fileID: 0}
