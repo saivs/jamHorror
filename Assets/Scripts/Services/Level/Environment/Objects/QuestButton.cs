@@ -3,6 +3,7 @@
 public class QuestButton : MonoBehaviour, IInteractable
 {
     [SerializeField] private MeshRenderer _meshRenderer;
+    [SerializeField] private Material _colorMaterial;
 
     private bool _painted;
 
@@ -14,7 +15,7 @@ public class QuestButton : MonoBehaviour, IInteractable
             {
                 if (brush.Painted)
                 {
-                    Paint(brush.CurrentColor);
+                    Paint();
                     Destroy(brush.gameObject);
                     return;
                 }
@@ -24,10 +25,10 @@ public class QuestButton : MonoBehaviour, IInteractable
         Press();
     }
 
-    private void Paint(Color color)
+    private void Paint()
     {
         _painted = true;
-        _meshRenderer.material.color = color;
+        _meshRenderer.material = _colorMaterial;
     }
 
     private void Press()

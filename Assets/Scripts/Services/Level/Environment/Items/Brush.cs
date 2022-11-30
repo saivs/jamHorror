@@ -4,24 +4,24 @@ using UnityEngine;
 public class Brush : Item
 {
     [SerializeField] private BrushConfig _config;
-    [SerializeField] private MeshRenderer _colorRenderer;
-
-    private Color _clearColor;
+    [SerializeField] private MeshRenderer _renderer;
+    [SerializeField] private Material _colorMaterialBrush;
+    [SerializeField] private Material _colorMaterialHandle;
+    [SerializeField] private Material _clearMaterialBrush;
+    [SerializeField] private Material _clearMaterialHandle;
 
     private bool _painted;
-    private Color _currentColor;
 
     public bool Painted => _painted;
-    public Color CurrentColor => _currentColor;
 
     private void Start()
     {
-        _clearColor = _colorRenderer.material.color;
+        SetPainted(false);
     }
 
-    public void Paint(Color color)
+    public void Paint()
     {
-        SetPainted(true, color);
+        SetPainted(true);
         SoundConfig.Instance.BrushPaint.PlayOneShotAtPoint(transform);
 
         StartCoroutine(ClearTimerCoroutine());
@@ -29,7 +29,7 @@ public class Brush : Item
 
     private void Clear()
     {
-        SetPainted(false, _clearColor);
+        SetPainted(false);
         SoundConfig.Instance.BrushClear.PlayOneShotAtPoint(transform);
     }
 
@@ -39,10 +39,11 @@ public class Brush : Item
         Clear();
     }
 
-    private void SetPainted(bool painted, Color color)
+    private void SetPainted(bool painted)
     {
         _painted = painted;
-        _currentColor = color;
-        _colorRenderer.material.color = color;
+        _renderer.materials = painted 
+            ? new Material[] { _colorMaterialHandle, _colorMaterialBrush }
+            : new Material[] { _clearMaterialHandle, _clearMaterialBrush };
     }
 }
