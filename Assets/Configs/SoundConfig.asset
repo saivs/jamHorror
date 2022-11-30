@@ -32,6 +32,6 @@ MonoBehaviour:
   ButtonPressGood: {fileID: 8300000, guid: 847b382502fb1084f8dd4fb37bbaab82, type: 3}
   ButtonPressBad: {fileID: 8300000, guid: a9504614a8f531d4c83162a05d652361, type: 3}
   BeerDrink: {fileID: 8300000, guid: 04614fd491c319d48a3727e63b0e3abd, type: 3}
-  DoorOpen: {fileID: 8300000, guid: ac579c2a998c0124f8bf8a953f6012b9, type: 3}
+  DoorOpen: {fileID: 8300000, guid: 5ad81bc1cba87d6488217cb96747c1b3, type: 3}
   DoorCantOpen: {fileID: 8300000, guid: c0eb7301cdebaa345b1373397674e535, type: 3}
   Screamer: {fileID: 8300000, guid: b6a4f92154de16f46a96e62f76923369, type: 3}
