@@ -312,10 +312,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 78315953428120954, guid: a09aecfdf6f28614892815a46696b394, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4562477048445704229, guid: a09aecfdf6f28614892815a46696b394, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -983,7 +979,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh40432
+  m_Name: pb_Mesh51284
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1195,14 +1191,6 @@ PrefabInstance:
     - target: {fileID: 578618196267063149, guid: e14864d8fc444c342a853a30dfec47c7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3694633671008920510, guid: e14864d8fc444c342a853a30dfec47c7, type: 3}
-      propertyPath: m_MaxDistance
-      value: 17.65227
-      objectReference: {fileID: 0}
-    - target: {fileID: 3694633671008920510, guid: e14864d8fc444c342a853a30dfec47c7, type: 3}
-      propertyPath: m_MinDistance
-      value: 14.069044
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e14864d8fc444c342a853a30dfec47c7, type: 3}

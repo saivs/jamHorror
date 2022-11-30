@@ -9,6 +9,7 @@ public class Brush : Item
     [SerializeField] private Material _colorMaterialHandle;
     [SerializeField] private Material _clearMaterialBrush;
     [SerializeField] private Material _clearMaterialHandle;
+    [SerializeField] private AudioSource _audioSource;
 
     private bool _painted;
 
@@ -22,7 +23,7 @@ public class Brush : Item
     public void Paint()
     {
         SetPainted(true);
-        SoundConfig.Instance.BrushPaint.PlayOneShotAtPoint(transform);
+        _audioSource.PlayOneShot(SoundConfig.Instance.BrushPaint);
 
         StartCoroutine(ClearTimerCoroutine());
     }
@@ -30,7 +31,7 @@ public class Brush : Item
     private void Clear()
     {
         SetPainted(false);
-        SoundConfig.Instance.BrushClear.PlayOneShotAtPoint(transform);
+        _audioSource.PlayOneShot(SoundConfig.Instance.BrushClear);
     }
 
     private IEnumerator ClearTimerCoroutine()

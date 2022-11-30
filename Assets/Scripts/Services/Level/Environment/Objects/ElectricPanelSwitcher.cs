@@ -23,8 +23,9 @@ public class ElectricPanelSwitcher : MonoBehaviour, IInteractable
     {
         _pressed = true;
 
-        float angle = -_button.transform.localRotation.eulerAngles.z * 2;
-        _button.RotateAround(_button.transform.position, Vector3.forward, angle);
+        var rotation = _button.localEulerAngles;
+        rotation.z = 140f;
+        _button.localEulerAngles = rotation;
 
         SoundConfig.Instance.ElectricPanelPressButton.PlayOneShotAtPoint(transform);
 

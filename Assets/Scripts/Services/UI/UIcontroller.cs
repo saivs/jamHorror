@@ -10,6 +10,7 @@ public class UiController : MonoBehaviour
     public static UiController Instance => _instance;
     private static UiController _instance;
 
+    [SerializeField] private GameObject _gameplayScreen;
     [SerializeField] private GameObject _screen;
     [SerializeField] private Image _endBackground;
 
@@ -86,7 +87,7 @@ public class UiController : MonoBehaviour
         SceneManager.LoadScene("Win");
     }
 
-    public void ShowLose(string message)
+    public void ShowLose(string message, float delayBeforeDeath)
     {
         Show();
         _loseBlock.SetActive(true);
@@ -94,10 +95,10 @@ public class UiController : MonoBehaviour
 
         _loseMessage.text = message;
 
-        StartCoroutine(LoseAnimationCoroutine());
+        StartCoroutine(LoseAnimationCoroutine(delayBeforeDeath));
     }
 
-    private IEnumerator LoseAnimationCoroutine()
+    private IEnumerator LoseAnimationCoroutine(float delayBeforeDeath)
     {
         _endBackground.enabled = false;
         _loseYouDied.enabled = false;
@@ -105,7 +106,7 @@ public class UiController : MonoBehaviour
         _loseButtons.alpha = 0f;
         _loseButtons.interactable = false;
 
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(delayBeforeDeath);
 
         StopAllSounds();
         SoundConfig.Instance.PlayerDeath.PlayOneShot();
@@ -155,6 +156,7 @@ public class UiController : MonoBehaviour
     private void SetActiveScreen(bool active)
     {
         _screen.SetActive(active);
+        _gameplayScreen.SetActive(!active);
     }
 
     private bool IsScreenActive()
