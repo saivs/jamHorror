@@ -64,6 +64,7 @@ public class UiController : MonoBehaviour
     {
         _screamerScreen.sprite = sprite;
         _screamerScreen.gameObject.SetActive(true);
+        _screamerScreen.color = Color.white;
 
         StartCoroutine(ScreamerAnimationCoroutine(duration));
     }
