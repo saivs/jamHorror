@@ -13,9 +13,14 @@ MonoBehaviour:
   m_Name: SoundConfig
   m_EditorClassIdentifier: 
   WalkSoundInterval: 1
-  Music: {fileID: 8300000, guid: 1c0f5548d75cbae4189fc0b7cb113229, type: 3}
-  Walk: {fileID: 8300000, guid: 15aea0d105504c84dbe505c52eb3d87c, type: 3}
-  DemonSpell: {fileID: 8300000, guid: 92b769469b93e15469a1d04ad37977b7, type: 3}
+  MusicLevel: {fileID: 8300000, guid: 1c0f5548d75cbae4189fc0b7cb113229, type: 3}
+  MusicBasement: {fileID: 8300000, guid: 4182911ee477fdb4db046e3a1782d505, type: 3}
+  MusicEbakaStanding: {fileID: 8300000, guid: 33ecfecad2586904e830383a66d49e2b, type: 3}
+  MusicEbakaDancing: {fileID: 8300000, guid: 65e12773b0fcee04888698d090ad203e, type: 3}
+  PlayerWalk: {fileID: 8300000, guid: 15aea0d105504c84dbe505c52eb3d87c, type: 3}
+  PlayerDemonSpell: {fileID: 8300000, guid: 92b769469b93e15469a1d04ad37977b7, type: 3}
+  PlayerDeath: {fileID: 8300000, guid: f8216320c523aa7429e8212368f3bfe1, type: 3}
+  PlayerWin: {fileID: 8300000, guid: 61e66d8a2444ece45a0856c172f93c91, type: 3}
   ItemPick: {fileID: 8300000, guid: 2905f50c9cfe88d418c4c2a4a4fffaa8, type: 3}
   ItemDrop: {fileID: 8300000, guid: 8b6f60342c8ede34fb16a2d825ec61df, type: 3}
   ElectricPanelPressButton: {fileID: 8300000, guid: 31e1e74738651df468c77fa305f088e0, type: 3}
@@ -23,11 +28,10 @@ MonoBehaviour:
   ElectricPanelBreak: {fileID: 8300000, guid: ef0e52f4488274749a685217005d81e1, type: 3}
   BrushPaint: {fileID: 8300000, guid: 4d0c7edf5a73a364485524b88cab1154, type: 3}
   BrushClear: {fileID: 8300000, guid: ab434655e378ed44db1a0d214c50d2d4, type: 3}
-  EbakaHit: {fileID: 8300000, guid: 3db306b222a204b41a58d699d77846d4, type: 3}
+  EbakaHit: {fileID: 8300000, guid: b6a4f92154de16f46a96e62f76923369, type: 3}
   ButtonPressGood: {fileID: 8300000, guid: 847b382502fb1084f8dd4fb37bbaab82, type: 3}
   ButtonPressBad: {fileID: 8300000, guid: a9504614a8f531d4c83162a05d652361, type: 3}
   BeerDrink: {fileID: 8300000, guid: 04614fd491c319d48a3727e63b0e3abd, type: 3}
-  BeerDrinkLast: {fileID: 8300000, guid: 0756cd651ea5d064cb06ff4104f5f486, type: 3}
   DoorOpen: {fileID: 8300000, guid: ac579c2a998c0124f8bf8a953f6012b9, type: 3}
   DoorCantOpen: {fileID: 8300000, guid: c0eb7301cdebaa345b1373397674e535, type: 3}
   Screamer: {fileID: 8300000, guid: b6a4f92154de16f46a96e62f76923369, type: 3}
