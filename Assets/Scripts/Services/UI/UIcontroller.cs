@@ -75,6 +75,7 @@ public class UiController : MonoBehaviour
     {
         _endBackground.enabled = false;
 
+        StopAllSounds();
         SoundConfig.Instance.PlayerWin.PlayOneShot();
 
         yield return new WaitForSeconds(1.5f);
@@ -106,6 +107,7 @@ public class UiController : MonoBehaviour
 
         yield return new WaitForSeconds(1.5f);
 
+        StopAllSounds();
         SoundConfig.Instance.PlayerDeath.PlayOneShot();
 
         _endBackground.enabled = true;
@@ -163,5 +165,14 @@ public class UiController : MonoBehaviour
     private void SetTimeScale(bool active)
     {
         Time.timeScale = active ? 1f : 0f;
+    }
+
+    private void StopAllSounds()
+    {
+        var sources = FindObjectsOfType<AudioSource>();
+        foreach (var s in sources)
+        {
+            s.Stop();
+        }
     }
 }
