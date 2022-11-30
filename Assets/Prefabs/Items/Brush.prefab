@@ -49,7 +49,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _optionalHoldPivot: {fileID: 0}
   _config: {fileID: 11400000, guid: d8f6d49484a3a244db34317ed93c9714, type: 2}
-  _colorRenderer: {fileID: 0}
+  _renderer: {fileID: 7432016333592246320}
+  _colorMaterialBrush: {fileID: 2100000, guid: 5a81c01ae0e70774db1e4357f2aa7186, type: 2}
+  _colorMaterialHandle: {fileID: 2100000, guid: c2811f3f5ff81cd4eae892addbd719ee, type: 2}
+  _clearMaterialBrush: {fileID: 2100000, guid: cd3462fabcb8bce41900be3f655ed44d, type: 2}
+  _clearMaterialHandle: {fileID: 2100000, guid: 39ceac5a50cb2224688859799cd5c1c1, type: 2}
 --- !u!54 &4409301071504548916
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -136,6 +140,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e79b0d548ae97e84ebea310bd0241d43, type: 3}
+--- !u!23 &7432016333592246320 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: e79b0d548ae97e84ebea310bd0241d43, type: 3}
+  m_PrefabInstance: {fileID: 8134141784638366900}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8604408177405281119 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e79b0d548ae97e84ebea310bd0241d43, type: 3}

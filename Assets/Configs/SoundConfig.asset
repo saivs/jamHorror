@@ -20,7 +20,7 @@ MonoBehaviour:
   PlayerWalk: {fileID: 8300000, guid: 15aea0d105504c84dbe505c52eb3d87c, type: 3}
   PlayerDemonSpell: {fileID: 8300000, guid: 92b769469b93e15469a1d04ad37977b7, type: 3}
   PlayerDeath: {fileID: 8300000, guid: f8216320c523aa7429e8212368f3bfe1, type: 3}
-  PlayerWin: {fileID: 8300000, guid: 61e66d8a2444ece45a0856c172f93c91, type: 3}
+  PlayerWin: {fileID: 8300000, guid: 30ca38ad2f6af0e489e405d37ccd1ca0, type: 3}
   ItemPick: {fileID: 8300000, guid: 2905f50c9cfe88d418c4c2a4a4fffaa8, type: 3}
   ItemDrop: {fileID: 8300000, guid: 8b6f60342c8ede34fb16a2d825ec61df, type: 3}
   ElectricPanelPressButton: {fileID: 8300000, guid: 31e1e74738651df468c77fa305f088e0, type: 3}
