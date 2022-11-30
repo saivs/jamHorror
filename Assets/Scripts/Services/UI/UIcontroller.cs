@@ -12,8 +12,11 @@ public class UiController : MonoBehaviour
 
     [SerializeField] private GameObject _gameplayScreen;
     [SerializeField] private GameObject _screen;
+    [SerializeField] private Image _screamerScreen;
 
     [SerializeField] private Image _endBackground;
+    [SerializeField] private Image _cursorImage;
+
     [SerializeField] private GameObject _pauseBlock;
     [SerializeField] private GameObject _loseBlock;
     [SerializeField] private DialogPopup _dialogPopup;
@@ -50,6 +53,28 @@ public class UiController : MonoBehaviour
     public void GoToRestart()
     {
         SceneManager.LoadScene("Level");
+    }
+
+    public void SetCursorHovered(bool hovered)
+    {
+        _cursorImage.color = hovered ? Color.red : Color.white;
+    }
+
+    public void ShowScreamer(Sprite sprite, float duration = 1.5f)
+    {
+        _screamerScreen.sprite = sprite;
+        _screamerScreen.gameObject.SetActive(true);
+
+        StartCoroutine(ScreamerAnimationCoroutine(duration));
+    }
+
+    private IEnumerator ScreamerAnimationCoroutine(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+
+        yield return StartCoroutine(FadeHide(_screamerScreen.color, 1f, color => _screamerScreen.color = color));
+
+        _screamerScreen.gameObject.SetActive(false);
     }
 
     public void ShowDialog(string message, Action yes, Action no)
@@ -96,7 +121,7 @@ public class UiController : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
 
         _endBackground.enabled = true;
-        yield return StartCoroutine(FadeUi(_endBackground.color, 1f, color => _endBackground.color = color));
+        yield return StartCoroutine(FadeShow(_endBackground.color, 1f, color => _endBackground.color = color));
 
         SceneManager.LoadScene("Win");
     }
@@ -126,19 +151,19 @@ public class UiController : MonoBehaviour
         SoundConfig.Instance.PlayerDeath.PlayOneShot();
 
         _endBackground.enabled = true;
-        yield return StartCoroutine(FadeUi(_endBackground.color, 1f, color => _endBackground.color = color));
+        yield return StartCoroutine(FadeShow(_endBackground.color, 1f, color => _endBackground.color = color));
 
         _loseYouDied.enabled = true;
-        yield return StartCoroutine(FadeUi(_loseYouDied.color, 1f, color => _loseYouDied.color = color));
+        yield return StartCoroutine(FadeShow(_loseYouDied.color, 1f, color => _loseYouDied.color = color));
 
         _loseMessage.enabled = true;
-        yield return StartCoroutine(FadeUi(_loseMessage.color, 1f, color => _loseMessage.color = color));
+        yield return StartCoroutine(FadeShow(_loseMessage.color, 1f, color => _loseMessage.color = color));
 
-        yield return StartCoroutine(FadeUi(Color.white, 1f, color => _loseButtons.alpha = color.a));
+        yield return StartCoroutine(FadeShow(Color.white, 1f, color => _loseButtons.alpha = color.a));
         _loseButtons.interactable = true;
     }
 
-    private IEnumerator FadeUi(Color startColor, float fadeSpeed, Action<Color> setColorAction)
+    private IEnumerator FadeShow(Color startColor, float fadeSpeed, Action<Color> setColorAction)
     {
         var color = startColor;
         color.a = 0f;
@@ -147,6 +172,20 @@ public class UiController : MonoBehaviour
         while (color.a < 1f)
         {
             color.a += Time.deltaTime * fadeSpeed;
+            setColorAction?.Invoke(color);
+            yield return null;
+        }
+    }
+
+    private IEnumerator FadeHide(Color startColor, float fadeSpeed, Action<Color> setColorAction)
+    {
+        var color = startColor;
+        color.a = 1f;
+        setColorAction?.Invoke(color);
+
+        while (color.a > 0f)
+        {
+            color.a -= Time.deltaTime * fadeSpeed;
             setColorAction?.Invoke(color);
             yield return null;
         }

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7624885328668082808
+--- !u!1 &8062256788684778851
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,45 +8,53 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7624885328668082810}
-  - component: {fileID: 7624885328668082809}
+  - component: {fileID: 8062256788684778848}
+  - component: {fileID: 8062256788684778854}
+  - component: {fileID: 8062256788684778849}
   m_Layer: 0
-  m_Name: LevelController
+  m_Name: Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7624885328668082810
+--- !u!4 &8062256788684778848
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7624885328668082808}
+  m_GameObject: {fileID: 8062256788684778851}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 19.42, y: 0, z: -6.43}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7624885328668082809
+--- !u!114 &8062256788684778854
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7624885328668082808}
+  m_GameObject: {fileID: 8062256788684778851}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27f35e7ea00c6864fa20581bea631e10, type: 3}
+  m_Script: {fileID: 11500000, guid: 625892307a831db4c9e9cef71891306e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 0}
-  _configs:
-  - {fileID: 11400000, guid: 153c9d2331f871c4f95ca97d76b9e15e, type: 2}
-  - {fileID: 11400000, guid: b47dc582d94445942953e04653fd283c, type: 2}
-  - {fileID: 11400000, guid: 998b1d13438bdae4280f84112c271cca, type: 2}
-  - {fileID: 11400000, guid: 04d2a095881680d4a912c8100f56a6e7, type: 2}
+--- !u!65 &8062256788684778849
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8062256788684778851}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 4.8299813, z: 4.2643857}
+  m_Center: {x: 0, y: 1.9149907, z: 0.0913589}

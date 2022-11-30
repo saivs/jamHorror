@@ -28,6 +28,7 @@ public class InteractionController : MonoBehaviour
         {
             _currentHitObject = null;
         }
+        UiController.Instance.SetCursorHovered(_currentHitObject != null);
     }
 
     private void Update()

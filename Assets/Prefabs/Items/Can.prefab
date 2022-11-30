@@ -46,8 +46,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ddad6082a8b4f542b7eecff75902263, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _config: {fileID: 11400000, guid: 461a592e46b07ef41bec0f223a0ebb00, type: 2}
-  _meshRenderer: {fileID: 0}
 --- !u!65 &2857545851406775912
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -119,6 +117,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: cd8087ad185740f4ab8c9c32e3fa612d, type: 3}
       propertyPath: m_Name
       value: Paint (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cd8087ad185740f4ab8c9c32e3fa612d, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd8087ad185740f4ab8c9c32e3fa612d, type: 3}

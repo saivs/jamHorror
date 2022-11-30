@@ -9,11 +9,6 @@ public class DialogPopup: MonoBehaviour
     private Action _yes;
     private Action _no;
 
-    private void Awake()
-    {
-        Hide();
-    }
-
     public void Show(string message, Action yes, Action no)
     {
         gameObject.SetActive(true);
