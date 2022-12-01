@@ -52,7 +52,7 @@ public class UiController : MonoBehaviour
 
     public void GoToRestart()
     {
-        SceneManager.LoadScene("Level");
+        SceneManager.LoadScene("Game");
     }
 
     public void SetCursorHovered(bool hovered)
