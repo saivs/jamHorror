@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ScreamerConfig
   m_EditorClassIdentifier: 
   Ebaka: {fileID: 21300000, guid: a0679fc096d931942a70b942a411f2f8, type: 3}
-  Hall: {fileID: 21300000, guid: e8123cbf02229cb4fb6b1039b735e050, type: 3}
+  Hall: {fileID: 21300000, guid: 13761d413e8535a448c9aa7a3a3a1450, type: 3}

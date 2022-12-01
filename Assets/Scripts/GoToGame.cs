@@ -5,19 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class GoToGame : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     public void ChangeScene(){
         SceneManager.LoadScene("Game");
     }
-
-    // Update is called once per frame
-    void Update()
+    
+    public void Exit()
     {
-        
+        Application.Quit();
     }
 }
