@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2254240751504735824}
   - component: {fileID: 2254240751504735827}
   - component: {fileID: 139810230792156624}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: QuestButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,7 +118,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1050fb094c86ad74f88a6447da5676c7, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1050fb094c86ad74f88a6447da5676c7, type: 3}

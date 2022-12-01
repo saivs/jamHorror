@@ -12939,7 +12939,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 18598
+  m_VersionIndex: 18604
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -16161,27 +16161,11 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 2461
+  m_VersionIndex: 2467
   m_IsSelectable: 1
-  m_SelectedFaces: 0800000011000000
-  m_SelectedEdges:
-  - a: 32
-    b: 33
-  - a: 33
-    b: 34
-  - a: 35
-    b: 32
-  - a: 34
-    b: 35
-  - a: 71
-    b: 68
-  - a: 68
-    b: 69
-  - a: 70
-    b: 71
-  - a: 69
-    b: 70
-  m_SelectedVertices: 2000000021000000220000002300000047000000440000004500000046000000
+  m_SelectedFaces: 
+  m_SelectedEdges: []
+  m_SelectedVertices: 
 --- !u!114 &1117432637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19358,19 +19342,11 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 2463
+  m_VersionIndex: 2469
   m_IsSelectable: 1
-  m_SelectedFaces: 00000000
-  m_SelectedEdges:
-  - a: 3
-    b: 0
-  - a: 0
-    b: 1
-  - a: 2
-    b: 3
-  - a: 1
-    b: 2
-  m_SelectedVertices: 03000000000000000100000002000000
+  m_SelectedFaces: 
+  m_SelectedEdges: []
+  m_SelectedVertices: 
 --- !u!114 &1135693430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21373,19 +21349,11 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1937
+  m_VersionIndex: 1943
   m_IsSelectable: 1
-  m_SelectedFaces: 10000000
-  m_SelectedEdges:
-  - a: 67
-    b: 64
-  - a: 64
-    b: 65
-  - a: 66
-    b: 67
-  - a: 65
-    b: 66
-  m_SelectedVertices: 43000000400000004100000042000000
+  m_SelectedFaces: 
+  m_SelectedEdges: []
+  m_SelectedVertices: 
 --- !u!114 &8974995330191025257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23266,13 +23234,11 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 3062
+  m_VersionIndex: 3068
   m_IsSelectable: 1
-  m_SelectedFaces: 13000000
-  m_SelectedEdges:
-  - a: 78
-    b: 79
-  m_SelectedVertices: 4e0000004f000000
+  m_SelectedFaces: 
+  m_SelectedEdges: []
+  m_SelectedVertices: 
 --- !u!114 &1580161032063177890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25252,19 +25218,11 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 2673
+  m_VersionIndex: 2679
   m_IsSelectable: 1
-  m_SelectedFaces: 11000000
-  m_SelectedEdges:
-  - a: 68
-    b: 69
-  - a: 69
-    b: 70
-  - a: 71
-    b: 68
-  - a: 70
-    b: 71
-  m_SelectedVertices: 44000000450000004600000047000000
+  m_SelectedFaces: 
+  m_SelectedEdges: []
+  m_SelectedVertices: 
 --- !u!114 &4951517233917975204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27376,19 +27334,11 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 2120
+  m_VersionIndex: 2126
   m_IsSelectable: 1
-  m_SelectedFaces: 32000000
-  m_SelectedEdges:
-  - a: 201
-    b: 200
-  - a: 200
-    b: 202
-  - a: 202
-    b: 203
-  - a: 203
-    b: 201
-  m_SelectedVertices: ca000000c9000000c8000000cb000000
+  m_SelectedFaces: 
+  m_SelectedEdges: []
+  m_SelectedVertices: 
 --- !u!114 &3029134156478676604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29311,27 +29261,11 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 3069
+  m_VersionIndex: 3075
   m_IsSelectable: 1
-  m_SelectedFaces: 1300000011000000
-  m_SelectedEdges:
-  - a: 78
-    b: 79
-  - a: 79
-    b: 77
-  - a: 77
-    b: 76
-  - a: 76
-    b: 78
-  - a: 70
-    b: 71
-  - a: 71
-    b: 69
-  - a: 69
-    b: 68
-  - a: 68
-    b: 70
-  m_SelectedVertices: 4e0000004f0000004d0000004c00000046000000470000004500000044000000
+  m_SelectedFaces: 
+  m_SelectedEdges: []
+  m_SelectedVertices: 
 --- !u!114 &3099407898393494747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32331,19 +32265,11 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 2313
+  m_VersionIndex: 2319
   m_IsSelectable: 1
-  m_SelectedFaces: 32000000
-  m_SelectedEdges:
-  - a: 201
-    b: 200
-  - a: 200
-    b: 202
-  - a: 202
-    b: 203
-  - a: 203
-    b: 201
-  m_SelectedVertices: ca000000c9000000c8000000cb000000
+  m_SelectedFaces: 
+  m_SelectedEdges: []
+  m_SelectedVertices: 
 --- !u!114 &2989840242030473940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33415,7 +33341,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1255
+  m_VersionIndex: 1261
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []

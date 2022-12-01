@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7688754530981231817}
   - component: {fileID: 6176581543821873925}
   - component: {fileID: 2857545851406775912}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Can
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: cd8087ad185740f4ab8c9c32e3fa612d, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd8087ad185740f4ab8c9c32e3fa612d, type: 3}

@@ -12,7 +12,7 @@ public class GoToGame : MonoBehaviour
     }
 
     public void ChangeScene(){
-        SceneManager.LoadScene("Level");
+        SceneManager.LoadScene("Game");
     }
 
     // Update is called once per frame
