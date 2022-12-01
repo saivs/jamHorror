@@ -37,6 +37,7 @@ public class Ebaka : MonoBehaviour, IInteractable
         _blind = true;
         var instancedBucket = Instantiate(bucket, _bucketPivot);
         instancedBucket.transform.localPosition = Vector3.zero;
+        instancedBucket.transform.localScale = Vector3.one;
     }
 
     private void KillFromHit()
