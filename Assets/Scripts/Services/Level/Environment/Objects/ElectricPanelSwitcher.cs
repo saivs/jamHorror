@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class ElectricPanelSwitcher : MonoBehaviour, IInteractable
 {
-    [SerializeField] private Transform _buttonRotatePivot;
     [SerializeField] private Transform _button;
 
     private bool _pressed;
@@ -24,8 +23,9 @@ public class ElectricPanelSwitcher : MonoBehaviour, IInteractable
     {
         _pressed = true;
 
-        float angle = -_button.transform.localRotation.eulerAngles.z * 2;
-        _button.RotateAround(_buttonRotatePivot.position, Vector3.forward, angle);
+        var rotation = _button.localEulerAngles;
+        rotation.z = 140f;
+        _button.localEulerAngles = rotation;
 
         SoundConfig.Instance.ElectricPanelPressButton.PlayOneShotAtPoint(transform);
 

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4154748898825965589}
   - component: {fileID: 4154748898825965588}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: DemonSpell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 657700288390166372, guid: b1b370f8ccf29f6488c68259fb0e3aef, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1b370f8ccf29f6488c68259fb0e3aef, type: 3}

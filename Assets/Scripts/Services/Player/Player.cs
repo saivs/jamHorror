@@ -12,7 +12,7 @@ public class Player: MonoBehaviour
 
     public Item Item => ItemHolder.Item;
 
-    public event Action<string> OnDied;
+    public event Action<string, float> OnDied;
     public event Action<int> OnDrunkBeer;
 
     public ItemHolder ItemHolder { get; private set; }
@@ -37,8 +37,8 @@ public class Player: MonoBehaviour
         }
     }
 
-    public void Kill(string message)
+    public void Kill(string message, float delayBeforeDeath = 1.5f)
     {
-        OnDied?.Invoke(message);
+        OnDied?.Invoke(message, delayBeforeDeath);
     }
 }

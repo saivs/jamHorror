@@ -37,8 +37,8 @@ public class LevelController: MonoBehaviour
         UiController.Instance.ShowWin();
     }
 
-    public void Lose(string message)
+    public void Lose(string message, float delayBeforeDeath)
     {
-        UiController.Instance.ShowLose(message);
+        UiController.Instance.ShowLose(message, delayBeforeDeath);
     }
 }

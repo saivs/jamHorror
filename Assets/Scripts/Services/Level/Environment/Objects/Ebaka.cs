@@ -12,6 +12,14 @@ public class Ebaka : MonoBehaviour, IInteractable
         _pickableItem.OnPickedUp += OnItemPickedUp;
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.GetComponent<Player>())
+        {
+            KillFromHit();
+        }
+    }
+
     public void Interact()
     {
         if (Player.Instance.Item is Bucket bucket)
@@ -21,7 +29,7 @@ public class Ebaka : MonoBehaviour, IInteractable
             return;
         }
 
-        KillPlayer(DeathMessageConfig.Instance.EbakaHit);
+        KillFromHit();
     }
 
     private void PutOnBucket(Bucket bucket)
@@ -31,17 +39,33 @@ public class Ebaka : MonoBehaviour, IInteractable
         instancedBucket.transform.localPosition = Vector3.zero;
     }
 
+    private void KillFromHit()
+    {
+        if (_blind)
+        {
+            return;
+        }
+        KillPlayer(DeathMessageConfig.Instance.EbakaHit);
+    }
+
+    private void KillFromBrush()
+    {
+        if (_blind)
+        {
+            return;
+        }
+        KillPlayer(DeathMessageConfig.Instance.EbakaBrush);
+    }
+
     private void KillPlayer(string message)
     {
-        SoundConfig.Instance.EbakaHit.PlayOneShotAtPoint(transform);
-        Player.Instance.Kill(message);
+        SoundConfig.Instance.EbakaHit.PlayOneShotAtPoint(transform, 2f);
+        UiController.Instance.ShowScreamer(ScreamerConfig.Instance.Ebaka, 2f);
+        Player.Instance.Kill(message, 1.7f);
     }
 
     private void OnItemPickedUp()
     {
-        if (!_blind)
-        {
-            KillPlayer(DeathMessageConfig.Instance.EbakaBrush);
-        }
+        KillFromBrush();
     }
 }
